@@ -1,10 +1,8 @@
-import React, { useState, useCallback } from 'react';
+import React, { useCallback } from 'react';
 import { motion } from 'framer-motion';
 import crumpetImage from './assets/CRUMPETT.jpeg';
-import backgroundImage from './assets/background.png';
 
 function App() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const contractAddress = "PLACEHOLDER_CONTRACT_ADDRESS";
   const dexScreenerLink = "https://dexscreener.com/";
 
@@ -64,7 +62,7 @@ function App() {
             >
               {/* Top Button */}
               <button
-                onClick={() => setIsModalOpen(true)}
+                onClick={() => copyToClipboard(contractAddress)}
                 className="btn text-2xl px-16 py-5"
               >
                 Buy CRUMPET
