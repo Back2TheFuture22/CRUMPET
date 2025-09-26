@@ -62,7 +62,12 @@ function App() {
             >
               {/* Top Button */}
               <button
-                onClick={() => copyToClipboard(contractAddress)}
+                onClick={() => {
+                  document.getElementById('how-to-buy')?.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                  });
+                }}
                 className="btn text-2xl px-16 py-5"
               >
                 Buy CRUMPET
@@ -89,25 +94,39 @@ function App() {
               </div>
             </motion.div>
 
+            {/* About Section */}
             <motion.div
-              className="glass-card max-w-4xl mx-auto mb-20"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
+              className="mb-20"
             >
-              <p className="text-xl md:text-2xl leading-relaxed text-center">
-                The Simpsons done it again, Crumpet is here — Crundle's other half and the queen of the timeline. 
-                Where Crundle predicts the future, Crumpet sets it in motion. Together they're unstoppable, but she's 
-                making her own mark with soft edges and hard gains. Loyal to the crumb-cause, powered by community, 
-                and baked to perfection for the moon. A bullish slice of culture, buttered with pure alpha. $CRMP isn't 
-                just his girlfriend… she's the next chapter.
-              </p>
+              <h2 className="text-4xl md:text-5xl font-display mb-8 text-center tracking-wide">
+                About Crumpet
+              </h2>
+              <div className="glass-card max-w-4xl mx-auto">
+                <p className="text-xl md:text-2xl leading-relaxed text-center">
+                  The Simpsons done it again, Crumpet is here — Crundle's other half and the queen of the timeline. 
+                  Where Crundle predicts the future, Crumpet sets it in motion. Together they're unstoppable, but she's 
+                  making her own mark with soft edges and hard gains. Loyal to the crumb-cause, powered by community, 
+                  and baked to perfection for the moon. A bullish slice of culture, buttered with pure alpha. $CRMP isn't 
+                  just his girlfriend… she's the next chapter.
+                </p>
+              </div>
             </motion.div>
 
             <div className="section-divider" />
 
             {/* Info Sections */}
-            <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+            <div id="how-to-buy" className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+              <motion.h2
+                className="text-4xl md:text-5xl font-display mb-8 text-center tracking-wide col-span-full"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+              >
+                How to Buy
+              </motion.h2>
               {/* Buy Section */}
               <motion.div
                 className="glass-card"
