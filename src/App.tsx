@@ -79,7 +79,7 @@ function App() {
                   href="https://x.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-secondary px-12 py-4 text-xl"
+                  className="btn-secondary px-12 py-4 text-xl text-white"
                 >
                   𝕏
                 </a>
@@ -87,7 +87,7 @@ function App() {
                   href="https://t.me"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-secondary px-12 py-4 text-xl"
+                  className="btn-secondary px-12 py-4 text-xl text-white"
                 >
                   Telegram
                 </a>
@@ -101,7 +101,14 @@ function App() {
               transition={{ delay: 0.4 }}
               className="mb-20"
             >
-              <h2 className="text-4xl md:text-5xl font-display mb-8 text-center tracking-wide">
+              <h2 
+                className="text-4xl md:text-5xl lg:text-6xl mb-8 text-center"
+                style={{ 
+                  WebkitTextStroke: '2px black',
+                  color: '#E07A24',
+                  textShadow: '4px 4px 0px rgba(0,0,0,0.2)'
+                }}
+              >
                 About Crumpet
               </h2>
               <div className="glass-card max-w-4xl mx-auto">
@@ -120,12 +127,17 @@ function App() {
             {/* Info Sections */}
             <div id="how-to-buy" className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
               <motion.h2
-                className="text-4xl md:text-5xl font-display mb-8 text-center tracking-wide col-span-full"
+                className="text-4xl md:text-5xl lg:text-6xl mb-12 text-center col-span-full"
+                style={{ 
+                  WebkitTextStroke: '2px black',
+                  color: '#E07A24',
+                  textShadow: '4px 4px 0px rgba(0,0,0,0.2)'
+                }}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
               >
-                How to Buy
+                How to Buy CRUMPET
               </motion.h2>
               {/* Buy Section */}
               <motion.div
@@ -135,7 +147,6 @@ function App() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
               >
-                <h2 className="text-3xl font-display mb-8 text-center tracking-wide">How to Buy CRUMPET</h2>
                 <div className="text-5xl mb-6 text-center">📋</div>
                 <h3 className="text-2xl font-display mb-6 text-center">Contract Address</h3>
                 <div className="bg-white/50 p-6 rounded-2xl mb-6 text-center">
